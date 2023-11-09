@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Demo</string>
+    <string name="hint1">Enter a number</string>
+    <string name="button1">Click</string>
+    <string name="TextView1">Result</string>
+    <string name="resultTest1">Welcome to the matrix</string>
+    <string name="main_activity">Main Activity</string>
+    <string name="activity_2">Activity 2</string>
+</resources>
