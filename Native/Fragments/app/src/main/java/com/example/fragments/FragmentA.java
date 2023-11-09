@@ -2,8 +2,11 @@ package com.example.fragments;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -48,6 +51,7 @@ public class FragmentA extends Fragment {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
+        Log.d("debug102", "Fragment_a onCreate");
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
@@ -59,6 +63,62 @@ public class FragmentA extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+        Log.d("debug102", "Fragment_a onCreateView");
         return inflater.inflate(R.layout.fragment_a, container, false);
     }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        Log.d("debug102", "Fragment_a onViewCreated");
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        Log.d("debug102", "Fragment_a onStart");
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        Log.d("debug102", "Fragment_a onResume");
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        Log.d("debug102", "Fragment_a onPause");
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        Log.d("debug102", "Fragment_a onStop");
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        Log.d("debug102", "Fragment_a onDestroyView");
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        Log.d("debug102", "Fragment_a onDestroy");
+    }
+
+    @Override
+    public void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        Log.d("debug102", "Fragment_a onSaveInstanceState");
+    }
+
+    @Override
+    public void onViewStateRestored(@Nullable Bundle savedInstanceState) {
+        super.onViewStateRestored(savedInstanceState);
+        Log.d("debug102", "Fragment_a onViewStateRestored");
+    }
+
 }
