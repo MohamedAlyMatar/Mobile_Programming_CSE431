@@ -175,12 +175,12 @@ class _homeState extends State<home> {
                 if (snapshot.hasData) {
                   List<DocumentSnapshot> documents = snapshot.data!.docs;
 
-                  List<MapEntry<String, dynamic>> tripList =
+                  List<MapEntry<String, dynamic>> noteList =
                       documents.map((doc) {
                     return MapEntry<String, dynamic>(doc.id, doc.data());
                   }).toList();
 
-                  List<MapEntry<String, dynamic>> filteredList = tripList
+                  List<MapEntry<String, dynamic>> filteredList = noteList
                       .where((entry) => entry.value["priority"]
                           .toString()
                           .toLowerCase()
